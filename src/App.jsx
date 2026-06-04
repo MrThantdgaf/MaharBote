@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import './App.css'
 import { dictionaries } from './i18n'
-import heroBanner from './img/A_cinematic_website_hero_banner_202606042216.jpeg'
-import mandalaArt from './img/Epic_fantasy_graphic_design_for_202606042225.jpeg'
+import heroBanner from './img/A_cinematic_website_hero_banner_202606042216.webp'
+import mandalaArt from './img/Epic_fantasy_graphic_design_for_202606042225.webp'
 import {
   calculateMahabote,
   getMyanmarYearFromGregorian,
