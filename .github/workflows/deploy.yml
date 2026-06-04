@@ -31,9 +31,15 @@ jobs:
         env:
           VITE_BASE_PATH: /MaharBote/
 
+      - name: Include favicon in Pages artifact
+        run: |
+          cp public/favicon.svg dist/favicon.svg
+          test -f dist/favicon.svg
+
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           publish_branch: gh-pages
+          force_orphan: true
