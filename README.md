@@ -1,16 +1,76 @@
-# React + Vite
+# MaharBote
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MaharBote is a React app for calculating a traditional Burmese Mahabote astrology house from a birth date or a manually entered Myanmar year and birth weekday.
 
-Currently, two official plugins are available:
+The app converts an English/Gregorian birth date into a Myanmar year, calculates the Mahabote remainder, places the seven weekday tokens into the fixed house layout, and highlights the matching birth house. It also includes bilingual UI text and short house readings for a lighter, more playful interpretation.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Calculate Mahabote results from an English/Gregorian date of birth.
+- Enter Myanmar year and birth weekday manually.
+- View the fixed Mahabote house grid: Adipati, Atun, Thike, Yaza, Marana, Binga, and Puti.
+- See the Myanmar year, weekday, remainder, birth number, placement order, and selected house.
+- Switch between Myanmar and English language labels.
+- Toggle light and dark themes.
+- Open a house reading with personality, future hint, and just-for-fun notes.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React 19
+- Vite
+- JavaScript
+- CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+Preview the production build:
+
+```bash
+npm run preview
+```
+
+Run linting:
+
+```bash
+npm run lint
+```
+
+## Project Structure
+
+```text
+src/
+  App.jsx                         Main application UI and state
+  App.css                         Application styling and themes
+  i18n.js                         English and Myanmar text dictionaries
+  main.jsx                        React entry point
+  utils/
+    mahaboteCalculator.js         Myanmar year conversion and Mahabote logic
+```
+
+## Calculation Notes
+
+The calculator derives the Myanmar year from a Gregorian date using Julian day conversion constants in `src/utils/mahaboteCalculator.js`. Mahabote placement is then selected from the Myanmar year remainder modulo 7 and matched against the birth weekday token.
+
+This app is intended for cultural, educational, and entertainment use. Astrology readings should be treated as interpretive content rather than factual predictions.
+
+## License
+
+This project is licensed under the terms included in `LICENSE`.
