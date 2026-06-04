@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import './App.css'
 import { dictionaries } from './i18n'
+import heroBanner from './img/A_cinematic_website_hero_banner_202606042216.jpeg'
+import mandalaArt from './img/Epic_fantasy_graphic_design_for_202606042225.jpeg'
 import {
   calculateMahabote,
   getMyanmarYearFromGregorian,
@@ -130,8 +132,12 @@ function App() {
   return (
     <main className={`app ${theme}`} lang={language}>
       <section className="workspace">
+        <section className="heroShell">
+          <img className="heroImage" src={heroBanner} alt="" />
+          <div className="heroVeil" />
+
         <header className="topbar">
-          <div>
+          <div className="heroCopy">
             <p className="eyebrow">Astrology Calculator</p>
             <h1>{t.appName}</h1>
             <p className="subtitle">{t.subtitle}</p>
@@ -169,6 +175,7 @@ function App() {
             </button>
           </div>
         </header>
+        </section>
 
         <section className="content">
           <aside className="inputPanel">
@@ -250,6 +257,7 @@ function App() {
           </aside>
 
           <section className="boardPanel">
+            <img className="boardArtwork" src={mandalaArt} alt="" />
             <div className="sectionHeader">
               <div>
                 <p className="eyebrow">{t.fixedHouses}</p>
