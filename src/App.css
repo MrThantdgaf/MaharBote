@@ -524,6 +524,60 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 16px;
 }
 
+.dateParts {
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr 0.9fr;
+  gap: 8px;
+}
+
+.dateParts input {
+  min-width: 0;
+  padding: 0 8px;
+  text-align: center;
+  font-size: 0.78rem;
+}
+
+.dateParts input::placeholder {
+  font-size: 0.72rem;
+  color: var(--text3);
+  opacity: 0.9;
+}
+
+.app[lang="my"] .dateParts input {
+  font-size: 0.72rem;
+}
+
+.app[lang="my"] .dateParts input::placeholder {
+  font-size: 0.68rem;
+}
+
+.calculateBtn {
+  width: 100%;
+  min-height: 44px;
+  margin-top: 4px;
+  border: 1px solid rgba(196, 154, 62, 0.42);
+  border-radius: 50px;
+  background: linear-gradient(135deg, var(--gold3), rgba(196, 154, 62, 0.18));
+  color: var(--gold2);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s, opacity 0.2s, background 0.2s;
+}
+
+.calculateBtn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  border-color: var(--gold);
+  background: linear-gradient(135deg, var(--gold3), rgba(196, 154, 62, 0.26));
+}
+
+.calculateBtn:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
 .fieldLabel {
   font-size: 0.68rem;
   font-weight: 600;
@@ -859,7 +913,8 @@ select:focus {
 
 .emptyGlyph {
   font-size: 2rem;
-  color: var(--gold3);
+  color: var(--gold2);
+  text-shadow: 0 0 18px rgba(201, 167, 90, 0.38);
   animation: pulse 3s ease-in-out infinite;
 }
 
@@ -1173,6 +1228,7 @@ select:focus {
   padding: clamp(40px, 6vw, 72px) clamp(24px, 4vw, 60px) clamp(24px, 4vw, 40px);
   position: relative;
   border-top: 1px solid var(--line);
+  overflow: hidden;
 }
 
 .footerTop {
@@ -1348,7 +1404,13 @@ button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible
 ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
 
 /* ─── Myanmar text ─── */
-.app[lang="my"] .heroTitle { font-family: 'Noto Sans Myanmar', serif; font-size: clamp(1.8rem, 4vw, 3.2rem); }
+.app[lang="my"] .heroTitle {
+  font-family: 'Noto Sans Myanmar', serif;
+  font-size: clamp(1.8rem, 4vw, 3.2rem);
+  line-height: 1.55;
+  padding-block: 0.18em;
+  overflow: visible;
+}
 .app[lang="my"] .summaryHouse { font-family: 'Noto Sans Myanmar', sans-serif; }
 .app[lang="my"] .gridTitle { font-family: 'Noto Sans Myanmar', sans-serif; }
 .app[lang="my"] .sheetTitle { font-family: 'Noto Sans Myanmar', sans-serif; }
@@ -1402,7 +1464,7 @@ button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible
   }
   .app[lang="my"] .heroTitle {
     font-size: 1.65rem;
-    line-height: 1.5;
+    line-height: 1.6;
   }
   .heroSub {
     font-size: 0.82rem;
@@ -1487,7 +1549,7 @@ button:focus-visible, select:focus-visible, input:focus-visible, a:focus-visible
   }
   .app[lang="my"] .heroTitle {
     font-size: 1.55rem;
-    line-height: 1.45;
+    line-height: 1.6;
   }
   .heroSub {
     font-size: 0.8rem;

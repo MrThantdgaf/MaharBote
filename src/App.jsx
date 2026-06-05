@@ -33,13 +33,30 @@ const NAV_ITEMS = [
   { id: 'developer', icon: 'user' },
 ]
 
+function buildDateString(year, month, day) {
+  const cleanYear = year.trim()
+  const cleanMonth = month.trim()
+  const cleanDay = day.trim()
+
+  if (cleanYear.length < 4 || !cleanMonth || !cleanDay) return ''
+
+  return [
+    cleanYear.padStart(4, '0'),
+    cleanMonth.padStart(2, '0'),
+    cleanDay.padStart(2, '0'),
+  ].join('-')
+}
+
 function App() {
   const [language, setLanguage] = useState('my')
   const [theme, setTheme] = useState('dark')
   const [calendarType, setCalendarType] = useState('english')
-  const [englishDob, setEnglishDob] = useState('')
+  const [englishYear, setEnglishYear] = useState('')
+  const [englishMonth, setEnglishMonth] = useState('')
+  const [englishDay, setEnglishDay] = useState('')
   const [manualMyanmarYear, setManualMyanmarYear] = useState('')
   const [manualWeekday, setManualWeekday] = useState('')
+  const [submittedCalculation, setSubmittedCalculation] = useState(null)
   const [isReadingOpen, setIsReadingOpen] = useState(false)
   const [isReadingClosing, setIsReadingClosing] = useState(false)
   const [isBubbleHinted, setIsBubbleHinted] = useState(false)
@@ -50,12 +67,16 @@ function App() {
 
   const t = dictionaries[language]
   const isEnglishCalendar = calendarType === 'english'
+  const englishDob = buildDateString(englishYear, englishMonth, englishDay)
   const hasManualYear = Number(manualMyanmarYear) >= 1000
   const hasManualWeekday = manualWeekday !== ''
   const convertedMyanmarYear = getMyanmarYearFromGregorian(englishDob)
-  const activeMyanmarYear = isEnglishCalendar ? convertedMyanmarYear : Number(manualMyanmarYear)
-  const activeWeekday = isEnglishCalendar ? getWeekdayFromGregorian(englishDob) : Number(manualWeekday)
-  const hasInput = isEnglishCalendar ? Boolean(englishDob) : hasManualYear && hasManualWeekday
+  const canCalculate = isEnglishCalendar
+    ? Boolean(englishDob && convertedMyanmarYear)
+    : hasManualYear && hasManualWeekday
+  const activeMyanmarYear = submittedCalculation?.myanmarYear ?? null
+  const activeWeekday = submittedCalculation?.weekday ?? null
+  const hasInput = Boolean(submittedCalculation)
 
   const result = useMemo(
     () => hasInput ? calculateMahabote({ myanmarYear: activeMyanmarYear, weekday: activeWeekday }) : null,
@@ -68,21 +89,6 @@ function App() {
     if (closeTimerRef.current) clearTimeout(closeTimerRef.current)
     if (hintTimerRef.current) clearTimeout(hintTimerRef.current)
   }, [])
-
-  useEffect(() => {
-    if (!houseReading || !resultKey) {
-      setIsReadingOpen(false)
-      setIsReadingClosing(false)
-      autoOpenedKeyRef.current = ''
-      return
-    }
-    if (autoOpenedKeyRef.current !== resultKey) {
-      autoOpenedKeyRef.current = resultKey
-      if (closeTimerRef.current) clearTimeout(closeTimerRef.current)
-      setIsReadingClosing(false)
-      setIsReadingOpen(true)
-    }
-  }, [houseReading, resultKey])
 
   // Scroll spy
   useEffect(() => {
@@ -124,6 +130,28 @@ function App() {
         hintTimerRef.current = null
       }, 900)
     }, 200)
+  }
+
+  function handleCalculate() {
+    if (!canCalculate) return
+
+    const nextCalculation = isEnglishCalendar
+      ? {
+          myanmarYear: convertedMyanmarYear,
+          weekday: getWeekdayFromGregorian(englishDob),
+        }
+      : {
+          myanmarYear: Number(manualMyanmarYear),
+          weekday: Number(manualWeekday),
+        }
+
+    autoOpenedKeyRef.current = resultKey
+    if (closeTimerRef.current) clearTimeout(closeTimerRef.current)
+    if (hintTimerRef.current) clearTimeout(hintTimerRef.current)
+    setSubmittedCalculation(nextCalculation)
+    setIsBubbleHinted(false)
+    setIsReadingClosing(false)
+    setIsReadingOpen(true)
   }
 
   return (
@@ -227,7 +255,38 @@ function App() {
               {isEnglishCalendar ? (
                 <label className="inputField">
                   <span className="fieldLabel">{t.englishDob}</span>
-                  <input type="date" value={englishDob} onChange={e => setEnglishDob(e.target.value)} />
+                  <div className="dateParts">
+                    <input
+                      type="number"
+                      inputMode="numeric"
+                      min="1"
+                      max="9999"
+                      placeholder={t.yearPlaceholder}
+                      aria-label={t.yearPlaceholder}
+                      value={englishYear}
+                      onChange={e => setEnglishYear(e.target.value)}
+                    />
+                    <input
+                      type="number"
+                      inputMode="numeric"
+                      min="1"
+                      max="12"
+                      placeholder={t.monthPlaceholder}
+                      aria-label={t.monthPlaceholder}
+                      value={englishMonth}
+                      onChange={e => setEnglishMonth(e.target.value)}
+                    />
+                    <input
+                      type="number"
+                      inputMode="numeric"
+                      min="1"
+                      max="31"
+                      placeholder={t.dayPlaceholder}
+                      aria-label={t.dayPlaceholder}
+                      value={englishDay}
+                      onChange={e => setEnglishDay(e.target.value)}
+                    />
+                  </div>
                 </label>
               ) : (
                 <>
@@ -248,6 +307,15 @@ function App() {
                   </label>
                 </>
               )}
+
+              <button
+                type="button"
+                className="calculateBtn"
+                onClick={handleCalculate}
+                disabled={!canCalculate}
+              >
+                {t.calculate}
+              </button>
 
               {hasInput && (
                 <div className="factsRow">
