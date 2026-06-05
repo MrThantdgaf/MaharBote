@@ -1,30 +1,55 @@
 export const dictionaries = {
   my: {
     appName: 'မြန်မာ့ မဟာဘုတ်',
-    subtitle: 'မွေးနေ့နှင့် မြန်မာနှစ်အလိုက် မဟာဘုတ်အိမ်တွက်ချက်ခြင်း',
+    subtitle: 'မွေးနေ့နှင့် မြန်မာနှစ်အလိုက် မဟာဘုတ်အိမ်၊ ဂြိုဟ်နံနှင့် အဓိပ္ပါယ်များကို တွက်ချက်ပေးသည်။',
+    nav: {
+      home: 'မူလ',
+      calculator: 'တွက်ရန်',
+      tradition: 'အစဉ်အလာ',
+      developer: 'ဖန်တီးသူ',
+    },
+    heroEyebrow: 'မဟာဘုတ် တွက်ချက်ခြင်း',
+    beginCalculation: 'တွက်ချက်ရန် စတင်မည်',
     calendar: 'ပြက္ခဒိန်',
     englishCalendar: 'အင်္ဂလိပ်',
     myanmarCalendar: 'မြန်မာ',
-    englishDob: 'အင်္ဂလိပ် မွေးနေ့',
+    englishDob: 'အင်္ဂလိပ် မွေးရက်',
     myanmarYear: 'မြန်မာနှစ်',
     weekday: 'မွေးနေ့',
-    selectWeekday: 'မွေးနေ့ရွေးပါ',
+    selectWeekday: 'မွေးနေ့ ရွေးပါ',
     result: 'ရလဒ်',
     remainder: 'ကြွင်း',
-    placement: 'နေရာချအစီအစဉ်',
-    yourHouse: 'သင့်အိမ်',
+    placement: 'နေရာချ အစီအစဉ်',
+    yourHouse: 'သင့်အိမ်',
     convertedYear: 'ပြောင်းလဲတွက်ထားသော မြန်မာနှစ်',
-    fixedHouses: 'အိမ်နေရာများ',
+    fixedHouses: 'မဟာဘုတ် အိမ်နေရာများ',
     language: 'ဘာသာစကား',
     light: 'အလင်း',
     dark: 'အမှောင်',
+    toggleTheme: 'အလင်း/အမှောင် ပြောင်းရန်',
     birthNumber: 'မွေးနေ့နံပါတ်',
-    personality: 'စရိုက်',
-    futureHint: 'အနာဂတ်အရိပ်အယောင်',
+    personality: 'စရိုက်လက္ခဏာ',
+    futureHint: 'ရှေ့ရေးအရိပ်အမြွက်',
     playfulNote: 'ပေါ့ပေါ့ပါးပါး မှတ်ချက်',
     houseReading: 'အိမ်အကြောင်း ပိုသိရန်',
-    noResult: 'မွေးရက်/မြန်မာနှစ် ထည့်ပါ။',
-    readyState: 'မွေးရက်ထည့်ပြီး ရလဒ်ကြည့်နိုင်ပါသည်။',
+    noResult: 'မွေးရက် သို့မဟုတ် မြန်မာနှစ်နှင့် မွေးနေ့ကို ထည့်ပါ။',
+    readyState: 'မွေးရက်ထည့်ပြီး ရလဒ်ကို ကြည့်နိုင်ပါသည်။',
+    close: 'ပိတ်ရန်',
+    traditionEyebrow: 'မြန်မာ့ရိုးရာ အမြစ်များ',
+    traditionTitle: 'ရှေးပညာမှ ယနေ့အမြင်အထိ',
+    traditionMainTitle: 'မြန်မာပြက္ခဒိန်ပညာအပေါ် အခြေခံသော ဖတ်ရှုချက်များ',
+    traditionMainText: 'မဟာဘုတ်သည် မွေးနေ့နှင့် မြန်မာနှစ်ကို အိမ် ၇ ခုထဲသို့ နေရာချကာ နံ၊ အိမ်နှင့် အဓိပ္ပါယ်များကို ရိုးရာပုံစံအတိုင်း ဖော်ပြပေးသည်။',
+    calculate: 'တွက်ချက်ရန်',
+    calculateText: 'အင်္ဂလိပ် သို့မဟုတ် မြန်မာပြက္ခဒိန်ဖြင့် ထည့်သွင်းပြီး မဟာဘုတ်အိမ်နေရာကို ချက်ချင်း ကြည့်နိုင်သည်။',
+    reflect: 'သုံးသပ်ရန်',
+    reflectText: 'သင့်အိမ်အလိုက် စရိုက်၊ ရှေ့ရေးအရိပ်အမြွက်နှင့် ပေါ့ပါးသော မှတ်ချက်များကို ဖတ်ရှုနိုင်သည်။',
+    footerBrand: 'မဟာဘုတ်',
+    developerLabel: 'ဖန်တီးသူ',
+    developerName: 'သန့်လွင်မောင်',
+    developerLocation: 'ရန်ကုန်၊ မြန်မာ',
+    disclaimer: 'ဤအက်ပ်သည် ယဉ်ကျေးမှု၊ ပညာရေးနှင့် ဖျော်ဖြေရေး ရည်ရွယ်ချက်အတွက်သာ ဖြစ်သည်။ ဗေဒင်ဖတ်ရှုချက်များကို အဓိပ္ပါယ်ဖွင့်ဆိုမှုအဖြစ်သာ ယူဆပါ။',
+    rights: 'မူပိုင်ခွင့်အားလုံး ထိန်းသိမ်းထားသည်။',
+    license: 'Apache License 2.0',
     houses: {
       adipati: 'အဓိပတိ',
       atun: 'အထွန်း',
@@ -54,60 +79,53 @@ export const dictionaries = {
     ],
     houseReadings: {
       adipati: {
-        personality:
-          'ဦးဆောင်ချင်စိတ်ရှိပြီး ကိုယ့်လမ်းကိုယ်ဖောက်တတ်သူ။ တာဝန်ယူရင် တည်တည်ငြိမ်ငြိမ်နဲ့ လူတွေကို ဆွဲခေါ်နိုင်တတ်ပါတယ်။',
-        future:
-          'နောက်ပိုင်းမှာ ကိုယ့်ဆုံးဖြတ်ချက်ကြောင့် အခွင့်အရေးတစ်ခု ပွင့်လာနိုင်ပါတယ်။ အမြန်မပြေးဘဲ သေချာရွေးရင် ပိုကောင်းမယ်။',
-        note: 'ဒါက ကံကြမ္မာတရားရုံးမဟုတ်ပါဘူးနော်၊ ပျော်စရာဖတ်စရာလေးပါ။',
+        personality: 'ဦးဆောင်လိုစိတ်ရှိပြီး မိမိလမ်းကို မိမိဖောက်တတ်သူ ဖြစ်သည်။ တာဝန်ယူရသောအခါ တည်ငြိမ်စွာဖြင့် အခြားသူများကို ဆွဲဆောင်နိုင်တတ်သည်။',
+        future: 'မိမိဆုံးဖြတ်ချက်ကနေ အခွင့်အရေးအသစ်တစ်ခု ပေါ်လာနိုင်သည်။ အလောတကြီးမဟုတ်ဘဲ သေချာရွေးချယ်လျှင် ပိုကောင်းသည်။',
+        note: 'ဤဖတ်ရှုချက်သည် ကံကြမ္မာအမိန့်မဟုတ်ပါ။ ပျော်ရွှင်စွာ ဖတ်ရန်သာ ဖြစ်သည်။',
       },
       atun: {
-        personality:
-          'ကြိုးစားရင် တောက်ပလာတတ်တဲ့ အမျိုးအစား။ အခက်အခဲတွေကို တိတ်တိတ်လေးကျော်ဖြတ်ပြီး နောက်ဆုံးမှာ လူတွေကို အံ့ဩစေတတ်ပါတယ်။',
-        future:
-          'အရင်က မမြင်သာတဲ့ အရည်အချင်းတစ်ခုက အလုပ်၊ ပညာ၊ စီးပွားရေးဘက်မှာ အသုံးဝင်လာနိုင်ပါတယ်။',
-        note: 'မီးအိမ်လိုပါပဲ၊ တစ်ခါတလေ switch ကိုယ့်ဟာကိုယ်ဖွင့်ပေးရမယ်။',
+        personality: 'တိတ်တိတ်လေး ကြိုးစားပြီး တဖြည်းဖြည်း ထွန်းလင်းလာတတ်သူ ဖြစ်သည်။ အခက်အခဲများကို ဖြတ်ကျော်ပြီး နောက်ဆုံးတွင် လူအများကို အံ့ဩစေနိုင်သည်။',
+        future: 'မမြင်သာသေးသော အရည်အချင်းတစ်ခုသည် အလုပ်၊ ပညာရေး သို့မဟုတ် စီးပွားရေးတွင် အသုံးဝင်လာနိုင်သည်။',
+        note: 'မီးအိမ်လိုပါပဲ။ တစ်ခါတစ်ရံ ကိုယ့်အလင်းကို ကိုယ်ဖွင့်ပေးရန် လိုသည်။',
       },
       thike: {
-        personality:
-          'စိတ်ထဲမှာ အစီအစဉ်များပြီး သိမ်းဆည်းတတ်သူ။ လူတိုင်းကို မပြောပေမယ့် အရေးကြီးတာတွေကို မှတ်မိပြီး သေချာကိုင်တွယ်နိုင်ပါတယ်။',
-        future:
-          'စုဆောင်းထားတဲ့ ဗဟုသုတ၊ ဆက်ဆံရေး၊ အတွေ့အကြုံတွေက နောက်ပိုင်းမှာ အကူအညီကြီးဖြစ်လာနိုင်ပါတယ်။',
-        note: 'သိုက်ဆိုတိုင်း ရွှေတူးရမယ်လို့ မဟုတ်ပါဘူး၊ password မမေ့တာလည်း သိုက်ပါပဲ။',
+        personality: 'အသေးစိတ်များ၊ အမှတ်တရများနှင့် အစီအစဉ်များကို သိမ်းဆည်းတတ်သူ ဖြစ်သည်။ အရာအားလုံးကို မပြောသော်လည်း များစွာ သိနေတတ်သည်။',
+        future: 'သိမ်းဆည်းထားသော ဗဟုသုတ၊ ဆက်ဆံရေး သို့မဟုတ် အတွေ့အကြုံများက နောက်ပိုင်းတွင် အထောက်အကူ ဖြစ်လာနိုင်သည်။',
+        note: 'သိုက်ဆိုတိုင်း ရွှေသိုက်မဟုတ်ပါ။ စကားဝှက် မမေ့တာလည်း သိုက်ပါပဲ။',
       },
       yaza: {
-        personality:
-          'ဂုဏ်သိက္ခာကို တန်ဖိုးထားပြီး လူကြားထဲမှာ မိမိပုံရိပ်ကောင်းချင်သူ။ သဘောထားကြီးပေမယ့် စံနှုန်းတော့ မြင့်တတ်ပါတယ်။',
-        future:
-          'တာဝန်ကြီးတဲ့နေရာ၊ လူတွေယုံကြည်ရတဲ့အခန်းကဏ္ဍ၊ သို့မဟုတ် ထင်ရှားလာနိုင်တဲ့အခွင့်အရေးတွေ ရှိနိုင်ပါတယ်။',
-        note: 'ရာဇအိမ်ဆိုပြီး crown ဝယ်ဖို့တော့ မလိုသေးပါဘူး၊ posture ကနေစရအောင်။',
+        personality: 'ဂုဏ်သိက္ခာ၊ လေးစားမှုနှင့် မှန်ကန်စွာ ဆောင်ရွက်မှုကို တန်ဖိုးထားသူ ဖြစ်သည်။ သဘောထားကြီးသော်လည်း စံနှုန်းမြင့်တတ်သည်။',
+        future: 'တာဝန်ကြီးသောနေရာ၊ ယုံကြည်ခံရသော အခန်းကဏ္ဍ သို့မဟုတ် ပိုထင်ရှားလာနိုင်သော အခွင့်အရေးများ ရရှိနိုင်သည်။',
+        note: 'ရာဇအိမ်ဆိုပြီး သရဖူဝယ်ရန် မလိုသေးပါ။ ကိုယ်နေကိုယ်ထားကနေ စပါ။',
       },
       marana: {
-        personality:
-          'ပြောင်းလဲမှုကို ကြောက်သလိုဖြစ်ပေမယ့် တကယ်ကျတော့ အပြောင်းအလဲထဲကနေ ပိုမာလာတတ်သူ။ စိတ်အားကောင်းပြီး အဆုံးထိခံနိုင်ပါတယ်။',
-        future:
-          'ဟောင်းတာတစ်ခုကို ဖြုတ်ချပြီး အသစ်တစ်ခုစနိုင်တဲ့ အချိန်တွေ ရောက်လာနိုင်ပါတယ်။ အဆုံးသတ်တစ်ခုက အစအသစ်ဖြစ်နိုင်တယ်။',
-        note: 'နာမည်က မရဏဆိုပြီး မစိုးရိမ်ပါနဲ့၊ dramatic title လေးပါပဲ။',
+        personality: 'ပြောင်းလဲမှုကို အစပိုင်းတွင် စိုးရိမ်တတ်သော်လည်း တကယ်တမ်းတွင် ပြောင်းလဲမှုထဲကနေ ပိုမိုခိုင်မာလာတတ်သူ ဖြစ်သည်။',
+        future: 'အဟောင်းတစ်ခုကို လွှတ်ချနိုင်လျှင် အစအသစ်တစ်ခုအတွက် နေရာဖွင့်နိုင်သည်။',
+        note: 'နာမည်က မရဏဆိုပေမယ့် မစိုးရိမ်ပါနှင့်။ ခေါင်းစဉ်နည်းနည်း ဒရာမာဆန်တာပါ။',
       },
       binga: {
-        personality:
-          'လှုပ်ရှားမှုများပြီး အတွေးမြန်သူ။ တစ်နေရာတည်းမှာ မနေချင်ဘဲ အသစ်အဆန်းတွေကို စမ်းကြည့်ရတာ သဘောကျတတ်ပါတယ်။',
-        future:
-          'ခရီး၊ အပြောင်းအရွှေ့၊ project အသစ်၊ လူသစ်တွေကနေ အခွင့်အရေးတွေ ပေါ်လာနိုင်ပါတယ်။',
-        note: 'ဘင်္ဂအိမ်က “တစ်ခုခုလုပ်ချင်နေတယ်” ဆိုတဲ့ energy များပါတယ်။ အနားယူတာလည်း plan ထဲထည့်ပါ။',
+        personality: 'လှုပ်ရှားမှုများပြီး အတွေးမြန်သူ ဖြစ်သည်။ တစ်နေရာတည်းတွင် မနေချင်ဘဲ အသစ်အဆန်းများကို စမ်းကြည့်ရတာ နှစ်သက်သည်။',
+        future: 'ခရီး၊ ပရောဂျက်အသစ်၊ နေရာပြောင်းခြင်း သို့မဟုတ် လူသစ်များမှ အခွင့်အရေးများ ပေါ်လာနိုင်သည်။',
+        note: 'ဘင်္ဂအိမ်မှာ “တစ်ခုခုလုပ်ချင်နေတယ်” ဆိုတဲ့ စွမ်းအင်များသည်။ အနားယူခြင်းလည်း အစီအစဉ်ထဲ ထည့်ပါ။',
       },
       puti: {
-        personality:
-          'သေးသေးလေးတွေကို သတိထားတတ်ပြီး အမှားတွေကို မြင်လွယ်သူ။ စကားပြောရင် တိုက်ရိုက်ဖြစ်တတ်ပေမယ့် ရည်ရွယ်ချက်က ပြင်ဆင်ချင်လို့ပါ။',
-        future:
-          'အသေးစိတ်ဂရုစိုက်မှုကြောင့် အလုပ်တစ်ခု အောင်မြင်နိုင်ပါတယ်။ ဒါပေမယ့် စိတ်ပင်ပန်းမှုကို လျှော့ဖို့လိုမယ်။',
-        note: 'ပုတိဆိုပြီး bad vibe မဟုတ်ပါဘူး၊ quality-control department လိုပါပဲ။',
+        personality: 'အသေးစိတ်ကို သတိထားတတ်ပြီး ပြင်ဆင်ရန်လိုအပ်သည်များကို မြန်မြန်မြင်တတ်သူ ဖြစ်သည်။ တိုက်ရိုက်ပြောတတ်သော်လည်း ရည်ရွယ်ချက်က တိုးတက်စေချင်ခြင်း ဖြစ်သည်။',
+        future: 'အသေးစိတ်ဂရုစိုက်မှုကြောင့် အလုပ်တစ်ခု အောင်မြင်နိုင်သည်။ သို့သော် ပြီးပြည့်စုံလိုစိတ်ကြောင့် မပင်ပန်းစေရန် သတိထားပါ။',
+        note: 'ပုတိဆိုပြီး မကောင်းသော အဓိပ္ပါယ်မဟုတ်ပါ။ အရည်အသွေးစစ်ဆေးရေးဌာနလိုပါပဲ။',
       },
     },
   },
   en: {
     appName: 'Burmese Mahar Boat',
-    subtitle:
-      'Traditional Mahabote house calculation by Myanmar year and birth weekday',
+    subtitle: 'Traditional Mahabote house calculation by Myanmar year and birth weekday.',
+    nav: {
+      home: 'Home',
+      calculator: 'Calculate',
+      tradition: 'Tradition',
+      developer: 'Developer',
+    },
+    heroEyebrow: 'Mahabote Astrology Calculator',
+    beginCalculation: 'Begin Calculation',
     calendar: 'Calendar',
     englishCalendar: 'English',
     myanmarCalendar: 'Myanmar',
@@ -124,6 +142,7 @@ export const dictionaries = {
     language: 'Language',
     light: 'Light',
     dark: 'Dark',
+    toggleTheme: 'Toggle theme',
     birthNumber: 'Birth number',
     personality: 'Personality',
     futureHint: 'Future-ish hint',
@@ -131,6 +150,22 @@ export const dictionaries = {
     houseReading: 'More House Facts',
     noResult: 'Enter a birth date or Myanmar year.',
     readyState: 'Enter a birth date to see the result.',
+    close: 'Close',
+    traditionEyebrow: 'Myanmar traditional roots',
+    traditionTitle: 'Ancient wisdom for modern reflection',
+    traditionMainTitle: 'Readings based on the Myanmar calendar tradition',
+    traditionMainText: 'Mahabote places the birth weekday and Myanmar year into seven houses, then presents the traditional meanings of each number, house, and placement.',
+    calculate: 'Calculate',
+    calculateText: 'Enter an English or Myanmar calendar birth date to see the Mahabote house placement instantly.',
+    reflect: 'Reflect',
+    reflectText: 'Read personality notes, future hints, and light-hearted reflections based on your house.',
+    footerBrand: 'MaharBote',
+    developerLabel: 'Developer',
+    developerName: 'Thant Lwin Maung',
+    developerLocation: 'Yangon, Myanmar',
+    disclaimer: 'This app is intended for cultural, educational, and entertainment purposes only. Astrology readings should be treated as interpretations, not certainty.',
+    rights: 'All rights reserved.',
+    license: 'Apache License 2.0',
     houses: {
       adipati: 'Adipati',
       atun: 'Atun',
@@ -160,52 +195,38 @@ export const dictionaries = {
     ],
     houseReadings: {
       adipati: {
-        personality:
-          'A natural lead-the-room type. You like direction, standards, and the feeling that things are moving with purpose.',
-        future:
-          'A useful opportunity may open through a decision you make yourself. Slower, cleaner choices look luckier than rushed ones.',
+        personality: 'A natural lead-the-room type. You like direction, standards, and the feeling that things are moving with purpose.',
+        future: 'A useful opportunity may open through a decision you make yourself. Slower, cleaner choices look luckier than rushed ones.',
         note: 'This is not a court order from destiny, just a fun little reading.',
       },
       atun: {
-        personality:
-          'A slow-burn brightener. You may seem quiet at first, then surprise people by being much more capable than they expected.',
-        future:
-          'A hidden skill can become useful in work, study, or money matters. Keep sharpening the thing people underestimate.',
+        personality: 'A slow-burn brightener. You may seem quiet at first, then surprise people by being much more capable than they expected.',
+        future: 'A hidden skill can become useful in work, study, or money matters. Keep sharpening the thing people underestimate.',
         note: 'Lamp energy: sometimes you only need to switch yourself on.',
       },
       thike: {
-        personality:
-          'A collector of useful details, memories, and plans. You do not reveal everything, but you often know more than you say.',
-        future:
-          'Something you have saved, learned, or quietly maintained may become valuable later.',
+        personality: 'A collector of useful details, memories, and plans. You do not reveal everything, but you often know more than you say.',
+        future: 'Something you have saved, learned, or quietly maintained may become valuable later.',
         note: 'Treasure house does not always mean gold. Remembering the password counts too.',
       },
       yaza: {
-        personality:
-          'You care about dignity, respect, and doing things properly. Generous, but with standards that are not exactly tiny.',
-        future:
-          'A role with more trust, visibility, or responsibility may come your way when people notice your consistency.',
+        personality: 'You care about dignity, respect, and doing things properly. Generous, but with standards that are not exactly tiny.',
+        future: 'A role with more trust, visibility, or responsibility may come your way when people notice your consistency.',
         note: 'No need to buy a crown yet. Start with posture.',
       },
       marana: {
-        personality:
-          'Change may feel intense, but you get stronger through it. You are better at endings and reinvention than you give yourself credit for.',
-        future:
-          'Letting go of an old pattern could create space for a much better chapter.',
+        personality: 'Change may feel intense, but you get stronger through it. You are better at endings and reinvention than you give yourself credit for.',
+        future: 'Letting go of an old pattern could create space for a much better chapter.',
         note: 'The name sounds dramatic. Please do not take it as a horror movie trailer.',
       },
       binga: {
-        personality:
-          'Fast-moving, curious, and easily bored by stale routines. You like fresh scenes, fresh ideas, and a little momentum.',
-        future:
-          'Travel, a new project, a move, or new people may bring the next lucky door.',
-        note: 'Big “I need to do something” energy. Rest can be part of the plan too.',
+        personality: 'Fast-moving, curious, and easily bored by stale routines. You like fresh scenes, fresh ideas, and a little momentum.',
+        future: 'Travel, a new project, a move, or new people may bring the next lucky door.',
+        note: 'Big "I need to do something" energy. Rest can be part of the plan too.',
       },
       puti: {
-        personality:
-          'Detail-sensitive and quick to spot what needs fixing. You may sound direct, but usually because you want things to improve.',
-        future:
-          'Careful attention to small things can turn into a real win. Just do not let perfection steal your sleep.',
+        personality: 'Detail-sensitive and quick to spot what needs fixing. You may sound direct, but usually because you want things to improve.',
+        future: 'Careful attention to small things can turn into a real win. Just do not let perfection steal your sleep.',
         note: 'Not bad vibes. More like the quality-control department.',
       },
     },
