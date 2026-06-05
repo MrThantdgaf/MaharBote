@@ -1,8 +1,11 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import './App.css'
 import { dictionaries } from './i18n'
-import heroBanner from './img/A_cinematic_website_hero_banner_202606042216.webp'
+import heroBanner from './img/A_glowing_ancient_bronze_mirror_202606051303.webp'
 import mandalaArt from './img/Epic_fantasy_graphic_design_for_202606042225.webp'
+import manuscriptStudy from './img/Quiet_scene_of_an_old_202606051313.webp'
+import ritualTable from './img/A_cinematic,_low-light_photograph_of_202606051144.webp'
+import lacquerDetail from './img/Close-up_of_a_traditional_Burmese_202606051317.webp'
 import {
   calculateMahabote,
   getMyanmarYearFromGregorian,
@@ -131,8 +134,15 @@ function App() {
 
   return (
     <main className={`app ${theme}`} lang={language}>
+      <nav className="floatingNav" aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#calculator">Calculator</a>
+        <a href="#tradition">Tradition</a>
+        <a href="#developer">Developer</a>
+      </nav>
+
       <section className="workspace">
-        <section className="heroShell">
+        <section className="heroShell" id="home">
           <img className="heroImage" src={heroBanner} alt="" />
           <div className="heroVeil" />
 
@@ -177,7 +187,7 @@ function App() {
         </header>
         </section>
 
-        <section className="content">
+        <section className="content" id="calculator">
           <aside className="inputPanel">
             <h2>{t.calendar}</h2>
 
@@ -371,6 +381,54 @@ function App() {
             </>
           )}
         </section>
+
+        <section className="visualStory" id="tradition" aria-label="Mahabote tradition">
+          <article className="storyPanel storyPanelLarge">
+            <img src={manuscriptStudy} alt="Traditional Burmese manuscript study with astrology chart" />
+            <div>
+              <p className="eyebrow">Traditional Roots</p>
+              <h2>Readings shaped by Burmese calendar wisdom</h2>
+              <p>
+                Mahabote places the birth day and Myanmar year into seven houses,
+                turning a simple date into a house, number, and symbolic reading.
+              </p>
+            </div>
+          </article>
+
+          <div className="storyStack">
+            <article className="storyPanel">
+              <img src={ritualTable} alt="Candlelit Burmese astrology table with manuscript and zodiac disc" />
+              <div>
+                <h3>Calculate</h3>
+                <p>Use English or Myanmar calendar input and see the fixed-house layout instantly.</p>
+              </div>
+            </article>
+            <article className="storyPanel">
+              <img src={lacquerDetail} alt="Traditional Burmese lacquer tray detail" />
+              <div>
+                <h3>Reflect</h3>
+                <p>Open your house reading for personality, future hints, and a short note.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <footer className="siteFooter" id="developer">
+          <div>
+            <p className="eyebrow">Developer</p>
+            <h2>Thant Lwin Maung</h2>
+            <p>Yangon, Myanmar</p>
+          </div>
+          <address>
+            <a href="https://www.thantlwinmaung.tech" target="_blank" rel="noreferrer">
+              www.thantlwinmaung.tech
+            </a>
+            <a href="tel:+959761067897">+95 976 106 7897</a>
+          </address>
+          <p className="copyright">
+            Copyright © {new Date().getFullYear()} Thant Lwin Maung. All rights reserved.
+          </p>
+        </footer>
       </section>
     </main>
   )
